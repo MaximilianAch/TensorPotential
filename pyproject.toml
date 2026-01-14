@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "versioneer[toml]"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tensorpotential"
+version = "0.2.0"
+description = "TensorFlow-based potential energy surfaces"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "scipy",
+    "tensorflow>=2.20.0",
+    "numpy>=2.1.0",
+    "pandas>=2.3.0",
+    "ase"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["tensorpotential", "tensorpotential.utils", "tensorpotential.potentials", "tensorpotential.functions"]
